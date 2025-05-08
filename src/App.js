@@ -35,7 +35,12 @@ function App() {
         placeholder="Collez votre texte ici..."
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        style={{ width: "100%", height: "150px", marginTop: "1rem", padding: "0.5rem" }}
+        style={{
+          width: "100%",
+          height: "150px",
+          marginTop: "1rem",
+          padding: "0.5rem",
+        }}
       />
 
       <button
@@ -54,21 +59,6 @@ function App() {
       >
         {loading ? "Génération en cours..." : "✨ Générer avec AutoPost AI"}
       </button>
-
-      <div style={{ marginTop: "2rem", textAlign: "center" }}>
-        <p><strong>⚡ Payez pour soutenir AutoPost AI</strong></p>
-        <a href="https://buy.stripe.com/9AQ4gA6oxab71Qk7ss" target="_blank" rel="noreferrer">
-          💳 Payer 3€ avec Stripe
-        </a>
-        <br />
-        <a href="https://ko-fi.com/casemero" target="_blank" rel="noreferrer">
-          ☕ Soutenir via Ko-fi
-        </a>
-        <br />
-        <a href="https://paypal.me/loopbot96" target="_blank" rel="noreferrer">
-          💸 Faire un don via PayPal
-        </a>
-      </div>
 
       {result && (
         <div style={{ marginTop: "2rem" }}>
@@ -97,9 +87,29 @@ function App() {
           )}
         </div>
       )}
+
+      <div style={{ textAlign: "center", marginTop: "3rem" }}>
+        <h3>⚡ Payez pour soutenir AutoPost AI</h3>
+        <ul style={{ listStyle: "none", padding: 0 }}>
+          <li>
+            💳 <a href="https://buy.stripe.com/9AQ4gA6oxab71Qk7ss" target="_blank" rel="noopener noreferrer">
+              Payer 3€ avec Stripe
+            </a>
+          </li>
+          <li>
+            ☕ <a href="https://ko-fi.com/casemero" target="_blank" rel="noopener noreferrer">
+              Soutenir via Ko-fi
+            </a>
+          </li>
+          <li>
+            🧾 <a href="https://www.paypal.com/paypalme/loopbot96" target="_blank" rel="noopener noreferrer">
+              Faire un don via PayPal
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
 
 export default App;
-
