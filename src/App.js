@@ -32,7 +32,7 @@ function App() {
       </p>
 
       <textarea
-        placeholder="Colle ton texte ici..."
+        placeholder="Collez votre texte ici..."
         value={input}
         onChange={(e) => setInput(e.target.value)}
         style={{ width: "100%", height: "150px", marginTop: "1rem", padding: "0.5rem" }}
@@ -54,6 +54,21 @@ function App() {
       >
         {loading ? "Génération en cours..." : "✨ Générer avec AutoPost AI"}
       </button>
+
+      <div style={{ marginTop: "2rem", textAlign: "center" }}>
+        <p><strong>⚡ Payez pour soutenir AutoPost AI</strong></p>
+        <a href="https://buy.stripe.com/9AQ4gA6oxab71Qk7ss" target="_blank" rel="noreferrer">
+          💳 Payer 3€ avec Stripe
+        </a>
+        <br />
+        <a href="https://ko-fi.com/casemero" target="_blank" rel="noreferrer">
+          ☕ Soutenir via Ko-fi
+        </a>
+        <br />
+        <a href="https://paypal.me/loopbot96" target="_blank" rel="noreferrer">
+          💸 Faire un don via PayPal
+        </a>
+      </div>
 
       {result && (
         <div style={{ marginTop: "2rem" }}>
@@ -82,44 +97,6 @@ function App() {
           )}
         </div>
       )}
-
-      {/* 🔽 BOUTONS DE PAIEMENT ICI 🔽 */}
-      <div style={{ marginTop: "3rem", textAlign: "center" }}>
-        <h3>💳 Accès Premium – 10 Générations IA pour 3 €</h3>
-        
-        {/* Stripe Button */}
-        <a href="https://buy.stripe.com/9AQ4gA6oxab71Qk7ss" target="_blank" rel="noreferrer">
-          <button style={{
-            padding: "10px 20px",
-            fontSize: "16px",
-            backgroundColor: "#635BFF",
-            color: "white",
-            border: "none",
-            borderRadius: "6px",
-            cursor: "pointer",
-            marginBottom: "15px"
-          }}>
-            Payer avec Stripe
-          </button>
-        </a>
-
-        {/* Ko-fi Button */}
-        <div style={{ marginBottom: "10px" }}>
-          <a href="https://ko-fi.com/casemero" target="_blank" rel="noreferrer">
-            <img 
-              height="36" 
-              style={{ border: 0 }} 
-              src="https://cdn.ko-fi.com/cdn/kofi5.png?v=3" 
-              alt="Soutiens-nous sur Ko-fi"
-            />
-          </a>
-        </div>
-
-        {/* PayPal */}
-        <p style={{ fontSize: "13px", color: "#555" }}>
-          💰 Ou PayPal direct : <strong>loopbot96@gmail.com</strong>
-        </p>
-      </div>
     </div>
   );
 }
